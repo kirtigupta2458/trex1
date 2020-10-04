@@ -46,10 +46,12 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
   
-  fill("brown");
+  
   ground1 = createSprite(300,190,600,20);
+  ground1.shapeColor="orange";
   ground.depth=ground1.depth;
   ground.depth=ground.depth+1;
+  
   
   gameOver = createSprite(300,100);
   gameOver.addImage(gameOverImg);
