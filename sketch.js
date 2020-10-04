@@ -46,6 +46,11 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
   
+  fill("brown");
+  ground1 = createSprite(300,190,600,20);
+  ground.depth=ground1.depth;
+  ground.depth=ground.depth+1;
+  
   gameOver = createSprite(300,100);
   gameOver.addImage(gameOverImg);
   
@@ -69,7 +74,7 @@ function setup() {
 
 function draw() {
   //trex.debug = true;
-  background(255);
+  background("skyblue");
   text("Score: "+ score, 500,50);
   
   if (gameState===PLAY){
